@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <meta name="description" content="">
+  <meta name="author" content="ThemeBucket">
+  <link rel="shortcut icon" href="#" type="image/png">
+
+  <title>Blank Page</title>
+
+  <link href="css/style.css" rel="stylesheet">
+  <link href="/css/style-responsive.css" rel="stylesheet">
+
+  <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+  <script src="js/html5shiv.js"></script>
+  <script src="js/respond.min.js"></script>
+  <![endif]-->
+    <!--百度-->
+    <style type="text/css">
+        body, html{width: 100%;height: 100%;margin:0;font-family:"微软雅黑";}
+        #allmap {width: 100%; height:500px; overflow: hidden;}
+        #result {width:100%;font-size:12px;}
+        dl,dt,dd,ul,li{
+            margin:0;
+            padding:0;
+            list-style:none;
+        }
+        p{font-size:12px;}
+        dt{
+            font-size:14px;
+            font-family:"微软雅黑";
+            font-weight:bold;
+            border-bottom:1px dotted #000;
+            padding:5px 0 5px 5px;
+            margin:5px 0;
+        }
+        dd{
+            padding:5px 0 0 5px;
+        }
+        li{
+            line-height:28px;
+        }
+    </style>
+    <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=5x1ICl2eFYmGQXUloVS66hLlSB2BugLM"></script>
+    <!--加载鼠标绘制工具-->
+    <script type="text/javascript" src="http://api.map.baidu.com/library/DrawingManager/1.4/src/DrawingManager_min.js"></script>
+    <link rel="stylesheet" href="http://api.map.baidu.com/library/DrawingManager/1.4/src/DrawingManager_min.css" />
+    <!--加载检索信息窗口-->
+    <script type="text/javascript" src="http://api.map.baidu.com/library/SearchInfoWindow/1.4/src/SearchInfoWindow_min.js"></script>
+    <link rel="stylesheet" href="http://api.map.baidu.com/library/SearchInfoWindow/1.4/src/SearchInfoWindow_min.css" />
+
+</head>
+
+<body class="sticky-header">
+
+<section>
+    <!-- left side start-->
+    <div class="left-side sticky-left-side">
+
+        <!--logo and iconic logo start-->
+        <div class="logo">
+            <a href="index.html"><img src="images/logo.png" alt=""></a>
+        </div>
+
+        <div class="logo-icon text-center">
+            <a href="index.html"><img src="images/logo_icon.png" alt=""></a>
+        </div>
+        <!--logo and iconic logo end-->
+
+
+        <div class="left-side-inner">
+
+            <!-- visible to small devices only -->
+            <div class="visible-xs hidden-sm hidden-md hidden-lg">
+                <div class="media logged-user">
+                    <img alt="" src="images/photos/user-avatar.png" class="media-object">
+                    <div class="media-body">
+                        <h4><a href="#">John Doe</a></h4>
+                        <span>"Hello There..."</span>
+                    </div>
+                </div>
+
+                <h5 class="left-nav-title">Account Information</h5>
+                <ul class="nav nav-pills nav-stacked custom-nav">
+                    <li><a href="#"><i class="fa fa-user"></i> <span>Profile</span></a></li>
+                    <li><a href="#"><i class="fa fa-cog"></i> <span>Settings</span></a></li>
+                    <li><a href="#"><i class="fa fa-sign-out"></i> <span>Sign Out</span></a></li>
+                </ul>
+            </div>
+
+            <!--sidebar nav start-->
+            <ul class="nav nav-pills nav-stacked custom-nav">
+                <li class="menu-list"><a href="index.html"><i class="fa fa-home"></i> <span>Dashboard</span></a>
+                    <ul class="sub-menu-list">
+                        <li><a href="index_alt.html"> Dashboard 1</a></li>
+                        <li><a href="index.html"> Dashboard 2</a></li>
+                    </ul>
+                </li>
+                <li class="menu-list nav-active"><a href=""><i class="fa fa-laptop"></i> <span>Layouts</span></a>
+                    <ul class="sub-menu-list">
+                        <li class="active"><a href="blank_page.html"> Blank Page</a></li>
+                        <li><a href="boxed_view.html"> Boxed Page</a></li>
+                        <li><a href="leftmenu_collapsed_view.html"> Sidebar Collapsed</a></li>
+                        <li><a href="horizontal_menu.html"> Horizontal Menu</a></li>
+
+                    </ul>
+                </li>
+                <li class="menu-list"><a href=""><i class="fa fa-book"></i> <span>UI Elements</span></a>
+                    <ul class="sub-menu-list">
+                        <li><a href="general.html"> General</a></li>
+                        <li><a href="buttons.html"> Buttons</a></li>
+                        <li><a href="tabs-accordions.html"> Tabs & Accordions</a></li>
+                        <li><a href="typography.html"> Typography</a></li>
+                        <li><a href="slider.html"> Slider</a></li>
+                        <li><a href="panels.html"> Panels</a></li>
+                        <li><a href="widgets.html"> Widgets</a></li>
+                    </ul>
+                </li>
+                <li class="menu-list"><a href=""><i class="fa fa-cogs"></i> <span>Components</span></a>
+                    <ul class="sub-menu-list">
+                        <li><a href="grids.html"> Grids</a></li>
+                        <li><a href="gallery.html"> Media Gallery</a></li>
+                        <li><a href="calendar.html"> Calendar</a></li>
+                        <li><a href="tree_view.html"> Tree View</a></li>
+                        <li><a href="nestable.html"> Nestable</a></li>
+
+                    </ul>
+                </li>
+
+                <li><a href="fontawesome.html"><i class="fa fa-bullhorn"></i> <span>Fontawesome</span></a></li>
+
+                <li class="menu-list"><a href=""><i class="fa fa-envelope"></i> <span>Mail</span></a>
+                    <ul class="sub-menu-list">
+                        <li><a href="mail.html"> Inbox</a></li>
+                        <li><a href="mail_compose.html"> Compose Mail</a></li>
+                        <li><a href="mail_view.html"> View Mail</a></li>
+                    </ul>
+                </li>
+
+                <li class="menu-list"><a href=""><i class="fa fa-tasks"></i> <span>Forms</span></a>
+                    <ul class="sub-menu-list">
+                        <li><a href="form_layouts.html"> Form Layouts</a></li>
+                        <li><a href="form_advanced_components.html"> Advanced Components</a></li>
+                        <li><a href="form_wizard.html"> Form Wizards</a></li>
+                        <li><a href="form_validation.html"> Form Validation</a></li>
+                        <li><a href="editors.html"> Editors</a></li>
+                        <li><a href="inline_editors.html"> Inline Editors</a></li>
+                        <li><a href="pickers.html"> Pickers</a></li>
+                        <li><a href="dropzone.html"> Dropzone</a></li>
+                    </ul>
+                </li>
+                <li class="menu-list"><a href=""><i class="fa fa-bar-chart-o"></i> <span>Charts</span></a>
+                    <ul class="sub-menu-list">
+                        <li><a href="flot_chart.html"> Flot Charts</a></li>
+                        <li><a href="morris.html"> Morris Charts</a></li>
+                        <li><a href="chartjs.html"> Chartjs</a></li>
+                        <li><a href="c3chart.html"> C3 Charts</a></li>
+                    </ul>
+                </li>
+                <li class="menu-list"><a href="#"><i class="fa fa-th-list"></i> <span>Data Tables</span></a>
+                    <ul class="sub-menu-list">
+                        <li><a href="basic_table.html"> Basic Table</a></li>
+                        <li><a href="dynamic_table.html"> Advanced Table</a></li>
+                        <li><a href="responsive_table.html"> Responsive Table</a></li>
+                        <li><a href="editable_table.html"> Edit Table</a></li>
+                    </ul>
+                </li>
+
+                <li class="menu-list"><a href="#"><i class="fa fa-map-marker"></i> <span>Maps</span></a>
+                    <ul class="sub-menu-list">
+                        <li><a href="google_map.html"> Google Map</a></li>
+                        <li><a href="vector_map.html"> Vector Map</a></li>
+                    </ul>
+                </li>
+                <li class="menu-list"><a href=""><i class="fa fa-file-text"></i> <span>Extra Pages</span></a>
+                    <ul class="sub-menu-list">
+                        <li><a href="profile.html"> Profile</a></li>
+                        <li><a href="invoice.html"> Invoice</a></li>
+                        <li><a href="pricing_table.html"> Pricing Table</a></li>
+                        <li><a href="timeline.html"> Timeline</a></li>
+                        <li><a href="blog_list.html"> Blog List</a></li>
+                        <li><a href="blog_details.html"> Blog Details</a></li>
+                        <li><a href="directory.html"> Directory </a></li>
+                        <li><a href="chat.html"> Chat </a></li>
+                        <li><a href="404.html"> 404 Error</a></li>
+                        <li><a href="500.html"> 500 Error</a></li>
+                        <li><a href="registration.html"> Registration Page</a></li>
+                        <li><a href="lock_screen.html"> Lockscreen </a></li>
+                    </ul>
+                </li>
+                <li><a href="login.html"><i class="fa fa-sign-in"></i> <span>Login Page</span></a></li>
+
+
+                <!--multi level menu start-->
+                <!--<li class="menu-list">-->
+                    <!--<a href="#"><i class="fa fa-map-marker"></i> <span>Multilavel</span></a>-->
+                    <!--<ul class="sub-menu-list">-->
+                        <!--<li class="menu-list"><a href="#"> menu1</a>-->
+                            <!--<ul class="sub-menu-list">-->
+                                <!--<li class="menu-list"><a href="#"><i class="fa fa-map-marker"></i> <span>menu2</span></a>-->
+                                    <!--<ul class="sub-menu-list">-->
+                                        <!--<li><a href="#"> menu2 sub</a></li>-->
+                                        <!--<li><a href="#"> menu2 sub2</a></li>-->
+                                    <!--</ul>-->
+                                <!--</li>-->
+                            <!--</ul>-->
+                        <!--</li>-->
+                    <!--</ul>-->
+                <!--</li>-->
+                <!--multi level menu end-->
+
+            </ul>
+            <!--sidebar nav end-->
+
+        </div>
+    </div>
+    <!-- left side end-->
+    
+    <!-- main content start-->
+    <div class="main-content" >
+
+        <!-- header section start-->
+        <div class="header-section">
+
+        <!--toggle button start-->
+        <a class="toggle-btn"><i class="fa fa-bars"></i></a>
+        <!--toggle button end-->
+
+        <!--search start-->
+        <form class="searchform" action="index.html" method="post">
+            <input type="text" class="form-control" name="keyword" placeholder="Search here..." />
+        </form>
+        <!--search end-->
+
+        <!--notification menu start -->
+        <div class="menu-right">
+            <ul class="notification-menu">
+                <li>
+                    <a href="#" class="btn btn-default dropdown-toggle info-number" data-toggle="dropdown">
+                        <i class="fa fa-tasks"></i>
+                        <span class="badge">8</span>
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-head pull-right">
+                        <h5 class="title">You have 8 pending task</h5>
+                        <ul class="dropdown-list user-list">
+                            <li class="new">
+                                <a href="#">
+                                    <div class="task-info">
+                                        <div>Database update</div>
+                                    </div>
+                                    <div class="progress progress-striped">
+                                        <div style="width: 40%" aria-valuemax="100" aria-valuemin="0" aria-valuenow="40" role="progressbar" class="progress-bar progress-bar-warning">
+                                            <span class="">40%</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="new">
+                                <a href="#">
+                                    <div class="task-info">
+                                        <div>Dashboard done</div>
+                                    </div>
+                                    <div class="progress progress-striped">
+                                        <div style="width: 90%" aria-valuemax="100" aria-valuemin="0" aria-valuenow="90" role="progressbar" class="progress-bar progress-bar-success">
+                                            <span class="">90%</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <div class="task-info">
+                                        <div>Web Development</div>
+                                    </div>
+                                    <div class="progress progress-striped">
+                                        <div style="width: 66%" aria-valuemax="100" aria-valuemin="0" aria-valuenow="66" role="progressbar" class="progress-bar progress-bar-info">
+                                            <span class="">66% </span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <div class="task-info">
+                                        <div>Mobile App</div>
+                                    </div>
+                                    <div class="progress progress-striped">
+                                        <div style="width: 33%" aria-valuemax="100" aria-valuemin="0" aria-valuenow="33" role="progressbar" class="progress-bar progress-bar-danger">
+                                            <span class="">33% </span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <div class="task-info">
+                                        <div>Issues fixed</div>
+                                    </div>
+                                    <div class="progress progress-striped">
+                                        <div style="width: 80%" aria-valuemax="100" aria-valuemin="0" aria-valuenow="80" role="progressbar" class="progress-bar">
+                                            <span class="">80% </span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="new"><a href="">See All Pending Task</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <a href="#" class="btn btn-default dropdown-toggle info-number" data-toggle="dropdown">
+                        <i class="fa fa-envelope-o"></i>
+                        <span class="badge">5</span>
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-head pull-right">
+                        <h5 class="title">You have 5 Mails </h5>
+                        <ul class="dropdown-list normal-list">
+                            <li class="new">
+                                <a href="">
+                                    <span class="thumb"><img src="images/photos/user1.png" alt="" /></span>
+                                        <span class="desc">
+                                          <span class="name">John Doe <span class="badge badge-success">new</span></span>
+                                          <span class="msg">Lorem ipsum dolor sit amet...</span>
+                                        </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <span class="thumb"><img src="images/photos/user2.png" alt="" /></span>
+                                        <span class="desc">
+                                          <span class="name">Jonathan Smith</span>
+                                          <span class="msg">Lorem ipsum dolor sit amet...</span>
+                                        </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <span class="thumb"><img src="images/photos/user3.png" alt="" /></span>
+                                        <span class="desc">
+                                          <span class="name">Jane Doe</span>
+                                          <span class="msg">Lorem ipsum dolor sit amet...</span>
+                                        </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <span class="thumb"><img src="images/photos/user4.png" alt="" /></span>
+                                        <span class="desc">
+                                          <span class="name">Mark Henry</span>
+                                          <span class="msg">Lorem ipsum dolor sit amet...</span>
+                                        </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <span class="thumb"><img src="images/photos/user5.png" alt="" /></span>
+                                        <span class="desc">
+                                          <span class="name">Jim Doe</span>
+                                          <span class="msg">Lorem ipsum dolor sit amet...</span>
+                                        </span>
+                                </a>
+                            </li>
+                            <li class="new"><a href="">Read All Mails</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <a href="#" class="btn btn-default dropdown-toggle info-number" data-toggle="dropdown">
+                        <i class="fa fa-bell-o"></i>
+                        <span class="badge">4</span>
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-head pull-right">
+                        <h5 class="title">Notifications</h5>
+                        <ul class="dropdown-list normal-list">
+                            <li class="new">
+                                <a href="">
+                                    <span class="label label-danger"><i class="fa fa-bolt"></i></span>
+                                    <span class="name">Server #1 overloaded.  </span>
+                                    <em class="small">34 mins</em>
+                                </a>
+                            </li>
+                            <li class="new">
+                                <a href="">
+                                    <span class="label label-danger"><i class="fa fa-bolt"></i></span>
+                                    <span class="name">Server #3 overloaded.  </span>
+                                    <em class="small">1 hrs</em>
+                                </a>
+                            </li>
+                            <li class="new">
+                                <a href="">
+                                    <span class="label label-danger"><i class="fa fa-bolt"></i></span>
+                                    <span class="name">Server #5 overloaded.  </span>
+                                    <em class="small">4 hrs</em>
+                                </a>
+                            </li>
+                            <li class="new">
+                                <a href="">
+                                    <span class="label label-danger"><i class="fa fa-bolt"></i></span>
+                                    <span class="name">Server #31 overloaded.  </span>
+                                    <em class="small">4 hrs</em>
+                                </a>
+                            </li>
+                            <li class="new"><a href="">See All Notifications</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <a href="#" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                        <img src="images/photos/user-avatar.png" alt="" />
+                        John Doe
+                        <span class="caret"></span>
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-usermenu pull-right">
+                        <li><a href="#"><i class="fa fa-user"></i>  Profile</a></li>
+                        <li><a href="#"><i class="fa fa-cog"></i>  Settings</a></li>
+                        <li><a href="#"><i class="fa fa-sign-out"></i> Log Out</a></li>
+                    </ul>
+                </li>
+
+            </ul>
+        </div>
+        <!--notification menu end -->
+
+        </div>
+        <!-- header section end-->
+
+        <!-- page heading start-->
+        <div class="page-heading">
+            <ul class="breadcrumb">
+                <li>
+                    <a href="#">Dashboard</a>
+                </li>
+                <li>
+                    <a href="#">Data Tables</a>
+                </li>
+                <li class="active"> 百度地图 </li>
+            </ul>
+        </div>
+        <!-- page heading end-->
+        <div class="btn-group">
+            <button class="btn btn-success new" type="button">新建区域</button>
+            <button class="btn btn-default new" type="button">新建路线</button>
+            <button class="btn btn-default new" type="button">新建驻车点</button>
+        </div>
+        <div id="result">
+            <input type="button" value="获取绘制的覆盖物个数" onclick="alert(overlays.length)"/>
+            <input type="button" value="清除所有覆盖物" onclick="clearAll()"/>
+
+            <input type="button" onclick="add_overlay();" value="添加覆盖物" />
+            <input type="button" onclick="remove_overlay();" value="删除覆盖物" />
+
+            <input type="button" onclick="marker.enableDragging();" value="可拖拽" />
+            <input type="button" onclick="marker.disableDragging();" value="不可拖拽" />
+
+            <button onclick = "polyline.enableEditing();circle.enableEditing();">开启线、面编辑功能</button>
+            <button onclick = "polyline.disableEditing();circle.disableEditing();">关闭线、面编辑功能</button>
+        </div>
+        <!--body wrapper start-->
+        <div class="wrapper">
+            <div id="allmap" style="overflow:hidden;zoom:1;position:relative;">
+                <div id="map" style="height:100%;-webkit-transition: all 0.5s ease-in-out;transition: all 0.5s ease-in-out;"></div>
+            </div>
+
+        </div>
+        <!--body wrapper end-->
+
+        <!--footer section start-->
+        <footer class="sticky-footer">
+            2014 &copy; AdminEx by ThemeBucket
+        </footer>
+        <!--footer section end-->
+
+
+    </div>
+    <!-- main content end-->
+</section>
+
+<!-- Placed js at the end of the document so the pages load faster -->
+<script src="js/jquery-1.10.2.min.js"></script>
+<script src="js/jquery-ui-1.9.2.custom.min.js"></script>
+<script src="js/jquery-migrate-1.2.1.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/modernizr.min.js"></script>
+<script src="js/jquery.nicescroll.js"></script>
+
+
+<!--common scripts for all pages-->
+<script src="js/scripts.js"></script>
+<script type="text/javascript">
+    $('.new').click(function () {
+        $('.new').removeClass('.btn-success');
+        $(this).addClass('.btn-success');
+    });
+
+
+    // 百度地图API功能
+    var map = new BMap.Map('map');
+    var poi = new BMap.Point(116.307852,40.057031);
+    map.centerAndZoom(poi, 16);
+    map.enableScrollWheelZoom();
+    var overlays = [];
+    var overlaycomplete = function(e){
+        overlays.push(e.overlay);
+    };
+    var styleOptions = {
+        strokeColor:"red",    //边线颜色。
+        fillColor:"red",      //填充颜色。当参数为空时，圆形将没有填充效果。
+        strokeWeight: 2,       //边线的宽度，以像素为单位。
+        strokeOpacity: 0.5,	   //边线透明度，取值范围0 - 1。
+        fillOpacity: 0.2,      //填充的透明度，取值范围0 - 1。
+        strokeStyle: 'solid' //边线的样式，solid或dashed。
+    };
+    //实例化鼠标绘制工具
+    var drawingManager = new BMapLib.DrawingManager(map, {
+        isOpen: false, //是否开启绘制模式
+        enableDrawingTool: true, //是否显示工具栏
+        drawingToolOptions: {
+            anchor: BMAP_ANCHOR_TOP_RIGHT, //位置
+            offset: new BMap.Size(5, 5), //偏离值
+        },
+        circleOptions: styleOptions, //圆的样式
+        polylineOptions: styleOptions, //线的样式
+        polygonOptions: styleOptions, //多边形的样式
+        rectangleOptions: styleOptions //矩形的样式
+    });
+    //添加鼠标绘制工具监听事件，用于获取绘制结果
+    drawingManager.addEventListener('overlaycomplete', overlaycomplete);
+    function clearAll() {
+        for(var i = 0; i < overlays.length; i++){
+            map.removeOverlay(overlays[i]);
+        }
+        overlays.length = 0
+    }
+
+    //已经知道点坐标，设置显示到页面
+    var marker = new BMap.Marker(new BMap.Point(116.307852,40.057031)); // 创建点
+    var polyline = new BMap.Polyline([
+        new BMap.Point(116.307852,40.057031),
+        new BMap.Point(116.307852,40.077031),
+        new BMap.Point(116.357852,40.078031)
+    ], {strokeColor:"red", strokeWeight:2, strokeOpacity:0.5});   //创建折线
+
+    var circle = new BMap.Circle(poi,100,{strokeColor:"red", strokeWeight:2, strokeOpacity:0.5}); //创建圆
+    //添加覆盖物
+    function add_overlay(){
+        map.addOverlay(marker);            //增加点
+        map.addOverlay(polyline);          //增加折线
+        map.addOverlay(circle);            //增加圆
+
+        marker.disableDragging();           // 不可拖拽
+        var p = marker.getPosition();       //获取marker的位置
+        console.log("marker的位置是" + p.lng + "," + p.lat);
+        //var c = circle.getPosition();
+        console.log("圆的半径是：" + circle.getRadius() + "，圆的中心点坐标是：" + circle.getCenter().lng + "," + circle.getCenter().lat);
+        //
+        var opts = {
+            position : poi,    // 指定文本标注所在的地理位置
+            offset   : new BMap.Size(30, -30)    //设置文本偏移量
+        };
+        var label = new BMap.Label("欢迎使用百度地图，这是一个简单的文本标注哦~", opts);  // 创建文本标注对象
+        label.setStyle({
+            color : "red",
+            fontSize : "12px",
+            height : "20px",
+            lineHeight : "20px",
+            fontFamily:"微软雅黑"
+        });
+        map.addOverlay(label);
+    }
+    //标注拖拽结束后坐标
+    marker.addEventListener("dragend", function(e){
+        alert("当前位置：" + e.point.lng + ", " + e.point.lat);
+    });
+    //清除覆盖物
+    function remove_overlay(){
+        map.clearOverlays();
+    }
+    var opts = {
+        width : 200,     // 信息窗口宽度
+        height: 100,     // 信息窗口高度
+        title : "海底捞王府井店"  // 信息窗口标题
+    };
+    /*var label = new BMap.Label("我是文字标注哦",{offset:new BMap.Size(20,-10)});
+    marker.setLabel(label);*/
+
+
+
+
+</script>
+</body>
+</html>

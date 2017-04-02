@@ -1,0 +1,12 @@
+.cache
+.idea
+
+# For testing
+test/
+
+node_modules/
+npm-debug.log
+
+logs/*
+.DS_Store
+
